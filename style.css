@@ -52,16 +52,16 @@ header{
 
 .right-head ul li a{
     text-decoration: none;
-    color: grey;
+    color: yellow;
     font-size: 23px;
     text-transform: uppercase;
     transition: all 0.5s;
 }
 
-.right-head ul li a:hover,
+/* .right-head ul li a:hover,
 .right-head ul li .active{
     color: yellow;
-}
+} */
 
 /* .right-head .hov{
     color: white;
