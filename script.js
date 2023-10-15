@@ -1,18 +1,22 @@
-const navLinksEls = document.querySelectorAll('.nav-bar');
-const sectionEls = document.querySelectorAll('.section');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
 
-let currentSection =  'home';
 window.addEventListener('scroll', () => {
-    sectionEls.forEach(sectionEl => {
-        if (window.scrollY >= (sectionEl.offsetTop - sectionEl.clientHeight / 2)){
-           currentSection = sectionEl.id;
-        }
-});
+    let current = '';
 
-    navLinksEls.forEach(navLinksEl => {
-        if(navLinksEl.href.includes(currentSection)){
-            document.querySelector('.active').classList.remove('.active');
-            navLinksEl.classList.add('.active');
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 2) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
         }
     });
 });
