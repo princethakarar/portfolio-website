@@ -5,9 +5,9 @@
     background-color: #182230;
 }
 
-body{
+/* body{
     padding-top: 100px;
-}
+} */
 
 /* #profile{
     margin-top: 120px;
@@ -20,7 +20,7 @@ html{
 /* header */
 
 header{
-    position: fixed;
+    position: sticky;
     width: 100%;
     z-index: 999;
     top: 0;
