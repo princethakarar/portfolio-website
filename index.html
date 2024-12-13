@@ -25,6 +25,12 @@
             </ul>
         </nav>
     </header>
+    <div class="popup" id="popup">
+        <div class="close-btn" id="close">&times;</div>
+        <div class="loader-line">
+            <span></span>
+        </div>
+    </div>
     <main>
         <section id="profile" class="section">
             <img src="images/prince-wall-pic.jpeg" class="prince" alt="prince">
@@ -237,6 +243,8 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+        let closeBtn = document.querySelector('#close-btn');
+        var popup = document.getElementById('popup');
         var typed = new Typed('.animation', {
             strings: ['Graphic Designer', 'Web Designer', 'Web Developer'],
             typeSpeed: 100,

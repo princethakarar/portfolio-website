@@ -1,5 +1,5 @@
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav a');
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('nav a');
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -19,4 +19,9 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+document.getElementById("popup").addEventListener('click', function() {
+    console.log("hii");
+    document.getElementById("popup").classList.toggle('hide');        
 });
